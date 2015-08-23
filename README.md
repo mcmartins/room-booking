@@ -10,7 +10,7 @@ The project is configured with Maven and can be compiled and archived using: mvn
 
 There is a folder dist containing the runnable jar and scripts to run on windows and linux systems.
 
-**Windows:** booking.bat c:\largeSet.csv 3600
+**Windows:** booking.bat c:\largeSet.csv 3600<br/>
 **Linux:**   booking.sh /tmp/largeSet.csv 3600
 
 ## REST API
