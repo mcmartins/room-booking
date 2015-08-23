@@ -2,8 +2,8 @@ package com.mcmartins.impl;
 
 import com.mcmartins.api.BookingInfo;
 import com.mcmartins.api.BookingRequest;
-import com.mcmartins.api.DataSource;
 import com.mcmartins.api.Resource;
+import com.mcmartins.api.Datasource;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -21,8 +21,8 @@ public class RoomBooking implements com.mcmartins.api.Booking {
     private final Map<Resource, List<BookingInfo>> bookings;
     //private final LocalDateTime initialDateTime = LocalDateTime.parse("2015-04-01T00:00:00Z");
 
-    public RoomBooking(DataSource dataSource) {
-        this.bookings = dataSource.read();
+    public RoomBooking(Datasource datasource) {
+        this.bookings = datasource.read();
     }
 
     public RoomBooking(Map<Resource, List<BookingInfo>> bookings) {
