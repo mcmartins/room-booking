@@ -21,7 +21,7 @@ A possible REST API for handling Booking request could be as follows:
 
 **URL:** https://api.marksandspencer.com/booking/v1/rooms<br/>
 **METHOD:** GET<br/>
-**EXAMPLE Request:** curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET https://api.marksandspencer.com/booking/v1rooms<br/>
+**EXAMPLE Request:** curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET https://api.marksandspencer.com/booking/v1/rooms<br/>
 **EXAMPLE Response:** [{"bookingId":1,"resource":"Room 1","user":"Manuel","2015-04-01 00:00:00 +0000","2015-04-01 01:00:00 +0000"},...]
 
 ### (b) Seeing all bookings for a room
