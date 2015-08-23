@@ -19,7 +19,6 @@ import java.util.Map;
 public class RoomBooking implements com.mcmartins.api.Booking {
 
     private final Map<Resource, List<BookingInfo>> bookings;
-    //private final LocalDateTime initialDateTime = LocalDateTime.parse("2015-04-01T00:00:00Z");
 
     public RoomBooking(Datasource datasource) {
         this.bookings = datasource.read();
