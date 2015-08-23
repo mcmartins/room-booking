@@ -38,7 +38,7 @@ A possible REST API for handling Booking request could be as follows:
 **EXAMPLE Request:** curl -H "Content-Type: application/json" -X POST -d '{"duration":3600,"requesterName":"Manuel"}' https://api.service.booking/v1/rooms<br/>
 **EXAMPLE Response:** {"bookingId":1,"resource":"Room 1","user":"Manuel","2015-04-01 00:00:00 +0000","2015-04-01 01:00:00 +0000"}
 
-### (d) Cancelling a booking for a room
+### (d) Updating a booking for a room
 
 **URL:** https://api.service.booking/v1/rooms/1<br/>
 **METHOD:** PUT<br/>
