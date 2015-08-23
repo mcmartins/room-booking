@@ -2,6 +2,7 @@ package com.mcmartins;
 
 import com.mcmartins.api.BookingInfo;
 import com.mcmartins.impl.BookingRequestImpl;
+import com.mcmartins.impl.CSVDatasource;
 import com.mcmartins.impl.RoomBooking;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -34,19 +35,19 @@ public class AppTest
     public void testApp() {
         // test load file from invalid path
         try {
-            new RoomBooking(new CSVDataSource("fake_path"));
+            new RoomBooking(new CSVDatasource("fake_path"));
             fail();
         } catch (final Exception e) {
             // expected
             assertTrue(true);
         }
         // test load large csv
-        RoomBooking roomBookingLarge = new RoomBooking(new CSVDataSource(getClass().getResourceAsStream("/largeSet.csv")));
+        RoomBooking roomBookingLarge = new RoomBooking(new CSVDatasource(getClass().getResourceAsStream("/largeSet.csv")));
         assertNotNull(roomBookingLarge);
         BookingInfo bookingInfoLarge = roomBookingLarge.create(new BookingRequestImpl(3600));
         assertNotNull(bookingInfoLarge);
         // test load small csv
-        RoomBooking roomBookingSmall = new RoomBooking(new CSVDataSource(getClass().getResourceAsStream("/smallSet.csv")));
+        RoomBooking roomBookingSmall = new RoomBooking(new CSVDatasource(getClass().getResourceAsStream("/smallSet.csv")));
         assertNotNull(roomBookingSmall);
         BookingInfo bookingInfoSmall = roomBookingSmall.create(new BookingRequestImpl(3600));
         assertNotNull(bookingInfoSmall);

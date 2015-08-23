@@ -1,6 +1,7 @@
 package com.mcmartins.impl;
 
 import com.mcmartins.api.BookingInfo;
+import com.mcmartins.api.Datasource;
 import com.mcmartins.api.Resource;
 import com.mcmartins.api.User;
 
@@ -14,7 +15,7 @@ import java.util.*;
  *
  * @author Manuel Martins
  */
-public class CSVDatasource implements DataSource {
+public class CSVDatasource implements Datasource {
 
     // CSV Delimiter
     private static final String CVS_SPLIT_BY = ",";
