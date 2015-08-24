@@ -2,7 +2,7 @@
 
 Marks&amp;Spencer API Design Task
 
-## Java API
+## Java API (Java 8!)
 
 The project is configured with Maven and can be compiled and archived using: mvn clean package
 
